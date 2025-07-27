@@ -1,11 +1,9 @@
-import Card from "./Card/Card.jsx"
-import Button from "./Button.jsx"
+import List from './List.jsx'
 
 function App() {
   return(
     <>
-        <Card/>
-        <Button/>
+        <List/>
     </>
   )
 }
