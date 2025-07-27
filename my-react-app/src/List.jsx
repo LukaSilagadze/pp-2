@@ -1,10 +1,19 @@
 function List (props){
-    const fruits = ["apple", "banana", "pinapple"];
     
-    const listItems = fruits.map(fruit => <li>{fruit}</li>)
+    const itemList = props.items;
+
+
+    const listItems = itemList.map(item => 
+        <li key={item.id}>
+            {item.name} - {item.calories}cal
+        </li>
+    );
 
     return(
-        <ul>{listItems}</ul>
+        <div className="listBox">
+        <h1 className="listTitle">{props.category.toUpperCase()} LIST</h1>
+        <ul className="listUl">{listItems}</ul>
+        </div>
     )
 }
 
