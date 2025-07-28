@@ -1,18 +1,25 @@
 function Button(){
+    let count = 0;
 
-    const styles = {
-        margin: "50px auto",
-        fontSize: "60px",
-        border: "none",
-        backgroundColor: "rgba(14, 205, 3, 0.536)",
-        padding: "20px",
-        borderRadius: "20px",
-        cursor: "pointer"
-    }
+    const handleClick = (e) => {
+        const btn = e.target;
+
+        if(btn.textContent === "Click Me"){
+            btn.textContent = "Clicked!";
+            btn.style.backgroundColor = "red";
+            btn.style.color = "white";
+            btn.textContent = "Clicked!";
+        }
+        else{
+            btn.style.textContent = "Click Me";
+            btn.style.backgroundColor = "";
+            btn.style.color = "";  
+        }
+    };
 
     return(
         <>
-            <button style={styles}>Click Me</button>
+            <button className="button" onClick={handleClick}>Click Me</button>
         </>
     )
 }
